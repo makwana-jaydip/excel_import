@@ -6,7 +6,7 @@ ruby "3.2.2"
 gem "rails", "~> 7.1.1"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -34,6 +34,7 @@ gem "bootsnap", require: false
 
 gem 'creek'
 gem 'bootstrap'
+gem 'jquery-rails'
 gem 'sassc-rails'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -41,8 +42,10 @@ gem 'sassc-rails'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem 'pry'
   gem 'rspec-rails'
-  gem 'factory_bot', '~> 6.3'
+  gem 'factory_bot_rails'
+  gem 'webmock'
 end
 
 group :development do

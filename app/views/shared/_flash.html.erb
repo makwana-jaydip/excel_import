@@ -1,0 +1,21 @@
+<% flash.each do |name, msg| %>
+  <% case name.to_s %>
+    <% when 'success' %>
+      <div class="alert alert-success mt-4">
+        <%= msg %>
+      </div>
+    <% when 'danger', 'error' %>
+      <div class="alert alert-danger mt-4">
+        <%= sanitize msg %>
+      </div>
+    <% when 'alert' %>
+      <div class="alert alert-danger mt-4">
+        <%= msg %>
+      </div>
+    <% when 'notice' %>
+      <div class="alert alert-info mt-4">
+        <%= msg %>
+      </div>
+  <% end %>
+<% end %>
+<% flash.clear %>

@@ -1,0 +1,18 @@
+<div class="container-fluid px-3 py-3">
+  <div class="row">
+    <div class="col-12">
+      <h3><%= I18n.t('users.import_excel_sheet')%></h3>
+    </div>
+  </div>
+  <hr class='mt-3'/>
+</div>
+<%= form_with(model: @user, url: process_excel_users_path, local: true, multipart: true, id: 'excel-upload-form px-3 py-3') do |form| %>
+  <div class='form-group px-3'>
+    <%= form.file_field :excel_file, class: 'form-control-file', accept: '.xlsx', id: 'user_excel_file' %>
+    <%= form.submit t('users.import_excel_btn'), class: 'btn btn-primary' %>
+    <%= link_to t('back'), users_path, class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>
+
+<%= render 'shared/flash' %>
+
