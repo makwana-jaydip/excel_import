@@ -1,0 +1,52 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+en:
+  hello: "Hello world"
+  back: 'Back'
+  users:
+    upload_valid_file: 'Please upload a valid Excel file.'
+    process_excel_successful: 'Excel file processed successfully. Please find processed result below.'
+    list: 'Users List'
+    id: 'ID'
+    first_name: 'First Name'
+    last_name: 'Last Name'
+    email_id: 'Email ID'
+    import_excel_sheet: 'Import Excel Sheet'
+    import_excel_btn: 'Import Excel'
+    excel_file_not_found: 'Excel file not found, Please upload first.'
+    failed_rows_result: 'Failed rows result'
+    row_number: 'Row Number'
+    reasons: 'Failed Reasons'
+    import: 'Import Users'
+    back_to_import_page: 'Back to import users page'
+    sheet_name: 'Sheet Name'
+    total_counts: 'Total Counts'
+    success_counts: 'Success Counts'
+    failed_counts: 'Failed Counts'

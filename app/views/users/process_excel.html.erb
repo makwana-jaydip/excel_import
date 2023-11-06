@@ -1,0 +1,52 @@
+<%= render 'shared/flash' %>
+
+<div class="container-fluid px-3 py-3">
+  <div class='row'>
+    <div class='form-group'>
+      <%= link_to t('users.back_to_import_page'), import_users_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='form-group'>
+      <%= t('users.total_counts') %>: <%= @success_count + @failed_count %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='form-group'>
+      <%= t('users.success_counts') %>: <%= @success_count %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='form-group'>
+      <%= t('users.failed_counts') %>: <%= @failed_count %>
+    </div>
+  </div>
+  <% if @failed_count.positive? %>
+    <hr/>
+    <h4><%= t('users.failed_rows_result') %></h4>
+    <hr class='mt-3'/>
+    <div class='table-responsive'>
+      <table class='table table-bordered'>
+        <thead>
+          <tr>
+            <th><%= I18n.t('users.sheet_name') %></th>
+            <th><%= I18n.t('users.row_number') %></th>
+            <th><%= I18n.t('users.reasons') %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @failed_rows&.each do |failed_result| %>
+            <tr>
+              <td><%= failed_result[:sheet_name] %></td>
+              <td><%= failed_result[:row] %></td>
+              <td><%= failed_result[:errors] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>
