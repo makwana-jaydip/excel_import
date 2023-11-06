@@ -46,3 +46,7 @@ en:
     reasons: 'Failed Reasons'
     import: 'Import Users'
     back_to_import_page: 'Back to import users page'
+    sheet_name: 'Sheet Name'
+    total_counts: 'Total Counts'
+    success_counts: 'Success Counts'
+    failed_counts: 'Failed Counts'

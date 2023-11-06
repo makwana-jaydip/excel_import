@@ -34,7 +34,7 @@ class UsersController < ApplicationController
             @success_count += 1
           else
             @failed_count += 1
-            @failed_rows << { row: index + 1, errors: user.errors.full_messages.join(', ') }
+            @failed_rows << { sheet_name: sheet.name, row: index + 1, errors: user.errors.full_messages.join(', ') }
           end
         end
       end
