@@ -18,3 +18,7 @@ This application is used for import excel file and process.
 - First install all gems using `bundle install`.
 - Create Database using command `rails db:create`.
 - Migrate Database using command `rails db:migrate`.
+
+### Please checkout videos for flow:
+
+[Import Excel](https://github.com/makwana-jaydip/excel_import/assets/31950628/09fee2d9-6a12-4a1c-b076-ea42b19ea259)
